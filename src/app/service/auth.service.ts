@@ -14,7 +14,7 @@ export class AuthService {
   RegisterUser(inputdata:any){
     return this.http.post(this.apiurl,inputdata)
   }
-  
+
   GetUserbyCode(id:any){
     return this.http.get(this.apiurl+'/'+id);
   }
@@ -38,5 +38,9 @@ export class AuthService {
   }
   Getaccessbyrole(role:any,menu:any){
     return this.http.get('http://localhost:3000/roleaccess?role='+role+'&menu='+menu)
+  }
+
+  getAllOrders() {
+    return this.http.get('http://localhost:3000/products');
   }
 }

@@ -3,9 +3,7 @@ import { AuthService } from '../service/auth.service';
 import { MatTableDataSource } from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import {MatDialog} from '@angular/material/dialog';
-import { UpdatepopComponent } from '../updatepop/updatepop.component';
-import { ExpressionStatement } from '@angular/compiler';
+
 @Component({
   selector: 'app-userlisting',
   templateUrl: './customer.component.html',
@@ -19,8 +17,7 @@ export class CustomerComponent {
   @ViewChild(MatPaginator) paginator! : MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
-    private service:AuthService,
-    private DIALOG: MatDialog
+    private service:AuthService
     ){
     this.LoadUser();
 }
@@ -39,20 +36,8 @@ export class CustomerComponent {
     })
 
   }
-  displayedColumns: string[] = ['username', 'name', 'email', 'role', 'status', 'action'];
-
-  UpdateUser(code:any){
-    this.DIALOG.open(UpdatepopComponent,{
-      enterAnimationDuration: '500ms',
-      exitAnimationDuration: '500ms',
-      width:'50%',
-      data:{
-        usercode:code
-      }
-    })
-  }
+  displayedColumns: string[] = ['username', 'name', 'email', 'status'];
 
   opendialog(code:any){
-
   }
 }

@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, AfterViewInit, ViewChild} from '@angular/core';
+import { AuthService } from '../service/auth.service';
+import { MatTableDataSource } from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent {
-  constructor(private router : Router) {}
+  dataSource : any;
+  userlist: any;
 
-  onClick() {
-    this.router.navigate(['navigate']);
+  @ViewChild(MatPaginator) paginator! : MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+  constructor(
+    private service:AuthService
+    ){
+    this.LoadUser();
+}
+
+  ngAfterViewInit(): void {
+    this.dataSource.sort = this.sort;
   }
+
+  userList:any;
+
+  LoadUser(){
+    this.service.getAllOrders().subscribe(res=>{
+      this.userList = res;
+      this.dataSource = new MatTableDataSource(this.userList);
+      this.dataSource.paginator=this.paginator;
+      this.dataSource.sort = this.sort;
+    })
+
+  }
+
+  displayedColumns: string[] = ['id', 'name', 'quantity', 'stars'];
+
 }

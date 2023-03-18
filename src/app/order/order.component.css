@@ -1,7 +1,8 @@
-p {
+th td {
   text-align: center;
-  margin: 0 auto;
+}
 
-  margin-top: 20%;
-  font-size: 2rem;
+th {
+  font-size: large;
+  font-weight: bold;
 }
