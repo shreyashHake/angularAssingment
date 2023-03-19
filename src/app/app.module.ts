@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {  OrderComponent } from './order/order.component';
 import { CustomerComponent } from './customer/customer.component';
+import { FooterComponent } from './footer/footer.component';
 // import { PagenotfoundComponent } from './updatepop copy/pagenotfound.component';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { CustomerComponent } from './customer/customer.component';
     RegisterComponent,
     OrderComponent,
     CustomerComponent,
+    FooterComponent,
     // PagenotfoundComponent,
   ],
   imports: [

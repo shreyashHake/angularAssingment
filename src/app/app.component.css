@@ -22,7 +22,7 @@ position: fixed;
 }
 
 .mat-icon {
-  background-color: rgb(200, 184, 184);
+  background-color: #dcdcdc;
   border-radius: 5%;
 }
 
@@ -31,4 +31,8 @@ span {
   text-align: center;
   font-size: large;
   font-weight: bold;
+}
+
+.navigation {
+  background-color: #808080;
 }
