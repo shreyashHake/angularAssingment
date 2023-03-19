@@ -27,25 +27,13 @@ export class LoginComponent {
   })
 
   proceedlogin() {
-    // if (this.loginform.valid) {
-    //   this.service.RegisterUser(this.loginform.value).subscribe(result => {
-    //     this.toastr.success('Please contact admin for enable access.','Registered successfully')
-    //     this.router.navigate(['login'])
-    //   });
-    // } else {
-    //   this.toastr.warning('Please enter valid data.')
-    // }
-    this.service.GetUserbyCode(this.loginform.value.username).subscribe(res => {
+    this.service.getUserbyId(this.loginform.value.username).subscribe(res => {
       this.userdata = res;
       console.log(this.userdata);
       if (this.userdata.password === this.loginform.value.password) {
-        if (this.userdata.isactive) {
-          sessionStorage.setItem('username', this.userdata.id);
-          sessionStorage.setItem('userrole', this.userdata.role);
-          this.router.navigate(['']);
-        } else {
-          this.toastr.error("Inactive User, Please Contact Admin")
-        }
+        sessionStorage.setItem('username', this.userdata.id);
+        sessionStorage.setItem('userrole', this.userdata.role);
+        this.router.navigate(['']);
       } else {
         this.toastr.error('Invalid Credentials');
       }

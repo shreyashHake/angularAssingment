@@ -19,7 +19,7 @@ export class CustomerComponent {
   constructor(
     private service:AuthService
     ){
-    this.LoadUser();
+    this.loadCustomer();
 }
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
@@ -27,8 +27,8 @@ export class CustomerComponent {
 
   userList:any;
 
-  LoadUser(){
-    this.service.Getall().subscribe(res=>{
+  loadCustomer(){
+    this.service.getAllCustomer().subscribe(res=>{
       this.userList = res;
       this.dataSource = new MatTableDataSource(this.userList);
       this.dataSource.paginator=this.paginator;
