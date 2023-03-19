@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { CustomerComponent } from './customer/customer.component';
+import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './guard/auth.guard';
-import { OrderComponent } from './order/order.component';
-import { HomeComponent } from './home/home.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
-import { RegisterComponent } from './register/register.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AboutusComponent } from './myComponents/aboutus/aboutus.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { CustomerComponent } from './myComponents/customer/customer.component';
+import { HomeComponent } from './myComponents/home/home.component';
+import { OrderComponent } from './myComponents/order/order.component';
+import { PagenotfoundComponent } from './myComponents/pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: "full" },

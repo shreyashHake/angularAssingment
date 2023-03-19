@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements DoCheck, AfterViewInit{
-  title = 'newTask';
+  title = 'InfoApp';
   ismenurequired=false;
 
   @ViewChild('drawer', {static: false}) drawer!: MatSidenav;

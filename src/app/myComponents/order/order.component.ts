@@ -1,8 +1,8 @@
 import { Component, AfterViewInit, ViewChild} from '@angular/core';
-import { AuthService } from '../service/auth.service';
 import { MatTableDataSource } from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-home',

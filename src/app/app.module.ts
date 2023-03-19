@@ -8,13 +8,12 @@ import { ToastrModule } from 'ngx-toastr';
 import { MaterialModule } from './material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './login/login.component';
-import {  OrderComponent } from './order/order.component';
-import { CustomerComponent } from './customer/customer.component';
-import { FooterComponent } from './footer/footer.component';
-import { RegisterComponent } from './register/register.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-// import { PagenotfoundComponent } from './updatepop copy/pagenotfound.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { CustomerComponent } from './myComponents/customer/customer.component';
+import { FooterComponent } from './myComponents/footer/footer.component';
+import { OrderComponent } from './myComponents/order/order.component';
+import { PagenotfoundComponent } from './myComponents/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     CustomerComponent,
     FooterComponent,
     PagenotfoundComponent,
-    // PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,
