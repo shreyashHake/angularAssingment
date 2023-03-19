@@ -16,14 +16,17 @@ position: fixed;
 }
 
 .mat-toolbar.mat-primary {
+  background-color: steelblue;
  position: sticky;
  top: 0;
  z-index: 1;
 }
 
 .mat-icon {
-  background-color: #dcdcdc;
+  background-color: white;
   border-radius: 5%;
+  color: black;
+  padding: 2px;
 }
 
 span {
@@ -33,6 +36,8 @@ span {
   font-weight: bold;
 }
 
-.navigation {
-  background-color: #808080;
+mat-sidenav {
+  color: black;
+  font-size: large;
+  font-weight: bolder;
 }

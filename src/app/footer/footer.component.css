@@ -2,12 +2,18 @@ mat-toolbar {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #f5f5f5;
-  color:black;
+  background-color: steelblue;
+  color: white;
 }
 
 .footer-content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  margin-left: 5px;
+  color: white;
+  text-decoration: none;
 }
