@@ -1,8 +1,8 @@
 .example-form {
+  justify-content: center;
     text-align: center;
   }
-  
+
   .example-full-width {
-    width: 100%;
+    width: 60%;
   }
- 
